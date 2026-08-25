@@ -1,0 +1,232 @@
+.navbar {
+  width: 100%;
+  min-height: 76px;
+
+  padding: 14px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  background: var(--navbar-bg);
+
+  border-bottom: 1px solid var(--border);
+
+  box-shadow: var(--shadow-soft);
+
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+isolation: isolate;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: var(--primary-dark);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: var(--lavender);
+  color: var(--primary);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.navbar-links a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 13px;
+
+  border-radius: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  background: var(--lavender);
+  color: var(--primary-dark);
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.theme-button,
+.sign-in-button,
+.sign-up-button {
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =====================================================
+   THEME BUTTON
+===================================================== */
+
+.theme-button {
+  width: 42px;
+  height: 42px;
+
+  background: var(--lavender);
+  color: var(--primary-dark);
+}
+
+.theme-button:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   SIGN IN
+===================================================== */
+
+.sign-in-button {
+  padding: 10px 14px;
+
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.sign-in-button:hover {
+  background: var(--lavender);
+  color: var(--primary-dark);
+}
+
+
+/* =====================================================
+   SIGN UP
+===================================================== */
+
+.sign-up-button {
+  padding: 10px 16px;
+
+  background: var(--primary);
+  color: white;
+
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.25);
+}
+
+.sign-up-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   DARK MODE
+   فقط رنگ‌ها تغییر می‌کنند
+===================================================== */
+
+html[data-theme="dark"] .navbar {
+  background: #151515;
+}
+
+html[data-theme="dark"] .navbar-logo {
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .logo-icon {
+  background: #29203d;
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .navbar-links a {
+  color: #c7c7c7;
+}
+
+html[data-theme="dark"] .navbar-links a:hover {
+  background: #29203d;
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .theme-button {
+  background: #29203d;
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .sign-in-button {
+  color: #f5f5f5;
+}
+
+html[data-theme="dark"] .sign-in-button:hover {
+  background: #29203d;
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .sign-up-button {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .sign-up-button:hover {
+  background: #7c3aed;
+}

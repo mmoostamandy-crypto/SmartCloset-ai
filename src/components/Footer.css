@@ -1,0 +1,32 @@
+.simple-footer {
+  width: 100%;
+  padding: 28px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid rgba(139, 92, 246, 0.15);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.simple-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  letter-spacing: 0.2px;
+}
+
+.simple-footer strong {
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .simple-footer {
+    padding: 22px 15px;
+    margin-top: 40px;
+  }
+
+  .simple-footer p {
+    font-size: 13px;
+  }
+}

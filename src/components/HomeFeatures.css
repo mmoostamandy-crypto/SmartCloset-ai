@@ -1,0 +1,447 @@
+.home-features {
+  padding: 100px 7%;
+  background: white;
+}
+
+.features-heading {
+  max-width: 650px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.features-heading > span {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.features-heading h2 {
+  margin-top: 12px;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+
+  color: var(--text-primary);
+}
+
+.features-heading h2 strong {
+  color: var(--primary);
+}
+
+.features-heading p {
+  margin-top: 18px;
+
+  color: var(--text-secondary);
+
+  line-height: 1.7;
+}
+
+.feature-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  padding: 28px 22px;
+
+  background: var(--lavender-light);
+
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  transition: 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+}
+
+.feature-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: var(--lavender);
+  color: var(--primary);
+}
+
+.feature-card h3 {
+  margin-top: 20px;
+
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin-top: 10px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .home-features {
+    padding: 70px 20px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}/* =========================================================
+   SMARTCLOSET — DARK MODE
+   HOME + HOME FEATURES + HOME EXTRA
+   ========================================================= */
+
+[data-theme="dark"] {
+
+  /* =========================
+     MAIN BACKGROUNDS
+  ========================= */
+
+  .home-stats,
+  .clothing-card,
+  .style-card,
+  .ai-preview-card,
+  .feature-card,
+  .how-section,
+  .home-features {
+    background: #111111;
+    color: #f5f3ff;
+  }
+
+  /* =========================
+     HOME STATS
+  ========================= */
+
+  .home-stats {
+    background: #111111;
+    border-color: #2b2b2b;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .home-stats div {
+    border-color: #303030;
+  }
+
+  .home-stats strong {
+    color: #c4b5fd;
+  }
+
+  .home-stats span {
+    color: #b8b2c4;
+  }
+
+
+  /* =========================
+     SECTION HEADINGS
+  ========================= */
+
+  .section-heading > span {
+    color: #a78bfa;
+  }
+
+  .section-heading h2 {
+    color: #f5f3ff;
+  }
+
+  .section-heading h2 strong {
+    color: #a78bfa;
+  }
+
+  .section-heading p {
+    color: #aaa4b5;
+  }
+
+
+  /* =========================
+     DIGITAL CLOSET
+  ========================= */
+
+  .closet-preview {
+    background: #0b0b0b;
+  }
+
+  .clothing-card {
+    background: #111111;
+    border-color: #2b2b2b;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  }
+
+  .clothing-card:hover {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+  }
+
+  .clothing-card h3 {
+    color: #f5f3ff;
+  }
+
+  .clothing-card > span {
+    color: #aaa4b5;
+  }
+
+  .clothing-image {
+    background: linear-gradient(
+      145deg,
+      #211b2b,
+      #30203a
+    );
+  }
+
+
+  /* =========================
+     HOW IT WORKS
+  ========================= */
+
+  .how-section {
+    background: #0b0b0b;
+  }
+
+  .step-card {
+    background: #151515;
+    border-color: #2b2b2b;
+    color: #f5f3ff;
+  }
+
+  .step-number {
+    color: #6d5ca8;
+  }
+
+  .step-card > svg {
+    color: #a78bfa;
+  }
+
+  .step-card h3 {
+    color: #f5f3ff;
+  }
+
+  .step-card p {
+    color: #aaa4b5;
+  }
+
+
+  /* =========================
+     AI PREVIEW
+  ========================= */
+
+  .ai-preview {
+    background: linear-gradient(
+      135deg,
+      #15131a,
+      #1b1724
+    );
+
+    border-color: #30283d;
+
+    box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  .ai-badge {
+    background: #201a2b;
+    color: #c4b5fd;
+    border: 1px solid #382e4a;
+  }
+
+  .ai-preview-content h2 {
+    color: #f5f3ff;
+  }
+
+  .ai-preview-content h2 strong {
+    color: #a78bfa;
+  }
+
+  .ai-preview-content > p {
+    color: #aaa4b5;
+  }
+
+  .ai-preview-content li {
+    color: #e8e3ef;
+  }
+
+  .ai-preview-content li svg {
+    color: #a78bfa;
+  }
+
+
+  /* =========================
+     AI CARD
+  ========================= */
+
+  .ai-preview-card {
+    background: #111111;
+    border: 1px solid #2b2b2b;
+
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .ai-card-top {
+    color: #aaa4b5;
+  }
+
+  .ai-card-top span:first-child {
+    color: #c4b5fd;
+  }
+
+  .ai-preview-card h3 {
+    color: #f5f3ff;
+  }
+
+  .ai-preview-card > p {
+    color: #aaa4b5;
+  }
+
+  .ai-outfit-visual {
+    background: linear-gradient(
+      145deg,
+      #211b2b,
+      #30203a
+    );
+  }
+
+  .weather-pill {
+    background: #241b32;
+    color: #c4b5fd;
+    border: 1px solid #3a2d50;
+  }
+
+
+  /* =========================
+     STYLE CATEGORIES
+  ========================= */
+
+  .style-section {
+    background: #0b0b0b;
+  }
+
+  .style-card {
+    background: #111111;
+    border-color: #2b2b2b;
+  }
+
+  .style-card h3 {
+    color: #f5f3ff;
+  }
+
+  .style-card p {
+    color: #aaa4b5;
+  }
+
+  .style-card > span {
+    background: #241b32;
+    color: #a78bfa;
+  }
+
+
+  /* =========================
+     HOME CTA
+  ========================= */
+
+  .home-cta {
+    background: linear-gradient(
+      135deg,
+      #6d28d9,
+      #7c3aed
+    );
+  }
+
+  .home-cta h2 {
+    color: #ffffff;
+  }
+
+  .home-cta p {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .home-cta .cta-button {
+    background: #111111;
+    color: #c4b5fd;
+  }
+
+  .home-cta .cta-button:hover {
+    background: #1c1c1c;
+  }
+
+
+  /* =========================
+     HOME FEATURES
+  ========================= */
+
+  .home-features {
+    background: #0b0b0b;
+  }
+
+  .features-heading > span {
+    color: #a78bfa;
+  }
+
+  .features-heading h2 {
+    color: #f5f3ff;
+  }
+
+  .features-heading h2 strong {
+    color: #a78bfa;
+  }
+
+  .features-heading p {
+    color: #aaa4b5;
+  }
+
+  .feature-card {
+    background: #151515;
+    border-color: #2b2b2b;
+    color: #f5f3ff;
+  }
+
+  .feature-card:hover {
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.5);
+  }
+
+  .feature-icon {
+    background: #241b32;
+    color: #a78bfa;
+  }
+
+  .feature-card h3 {
+    color: #f5f3ff;
+  }
+
+  .feature-card p {
+    color: #aaa4b5;
+  }
+
+
+  /* =========================
+     COMMON TEXT
+  ========================= */
+
+  .home-stats,
+  .clothing-card,
+  .step-card,
+  .ai-preview,
+  .ai-preview-card,
+  .style-card,
+  .feature-card {
+    color: #f5f3ff;
+  }
+}

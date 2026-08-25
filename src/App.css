@@ -1,0 +1,603 @@
+/* =========================================================
+   SMARTCLOSET — GLOBAL APP CSS
+   PROFESSIONAL DARK MODE
+   ========================================================= */
+
+
+/* =========================================================
+   LIGHT MODE VARIABLES
+   ========================================================= */
+
+:root {
+  --app-bg: #ffffff;
+  --app-surface: #ffffff;
+  --app-card: #ffffff;
+
+  --text-primary: #241c35;
+  --text-secondary: #746b82;
+  --text-muted: #958ca1;
+
+  --border: #eadff8;
+
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+
+  --lavender: #f1e8ff;
+
+  --shadow-soft:
+    0 8px 30px rgba(91, 61, 126, 0.07);
+}
+
+
+/* =========================================================
+   DARK MODE VARIABLES
+   ========================================================= */
+
+.dark-theme {
+  --app-bg: #181818;
+  --app-surface: #202020;
+  --app-card: #292929;
+
+  --text-primary: #ffffff;
+  --text-secondary: #d0d0d0;
+  --text-muted: #a0a0a0;
+
+  --border: #3f3f3f;
+
+  --primary: #9b6df5;
+  --primary-dark: #8b5cf6;
+
+  --lavender: #343039;
+
+  --shadow-soft:
+    0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  background: var(--app-bg);
+  color: var(--text-primary);
+}
+
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.app {
+  min-height: 100vh;
+
+  background: var(--app-bg);
+  color: var(--text-primary);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================================
+   DARK BODY
+   ========================================================= */
+
+html.dark-theme,
+body.dark-theme,
+body.dark-theme #root {
+  background: #181818 !important;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK APP
+   ========================================================= */
+
+.app.dark-theme {
+  background: #181818 !important;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.dark-theme main {
+  background: #181818 !important;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ALL SECTIONS
+   ========================================================= */
+
+.dark-theme section {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+  color: #ffffff;
+}
+
+.dark-theme p {
+  color: #d0d0d0;
+}
+
+.dark-theme span {
+  color: inherit;
+}
+
+
+/* =========================================================
+   ALL COMMON CARDS
+   ========================================================= */
+
+.dark-theme .card,
+.dark-theme .section-card,
+.dark-theme .content-card,
+.dark-theme .feature-card,
+.dark-theme .stat-card,
+.dark-theme .closet-card,
+.dark-theme .weather-card,
+.dark-theme .favorite-card {
+  background: #292929 !important;
+  color: #ffffff;
+  border-color: #3f3f3f !important;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   ALL DIV CONTAINERS
+   ========================================================= */
+
+.dark-theme .app > div,
+.dark-theme main > div {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+  background: #292929 !important;
+  color: #ffffff !important;
+
+  border-color: #464646 !important;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+  color: #8f8f8f !important;
+}
+
+
+/* =========================================================
+   SELECT OPTION
+   ========================================================= */
+
+.dark-theme select option {
+  background: #292929;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   WHITE BACKGROUNDS
+   Remove white from common elements
+   ========================================================= */
+
+.dark-theme .bg-white,
+.dark-theme .background-white,
+.dark-theme .white-bg {
+  background: #292929 !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.dark-theme button {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTONS
+   ========================================================= */
+
+.dark-theme .secondary-button,
+.dark-theme .outline-button {
+  background: #292929 !important;
+  border-color: #484848 !important;
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.dark-theme a {
+  color: #c4a7ff;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.dark-theme .navbar {
+  background: #202020 !important;
+  border-bottom-color: #3f3f3f !important;
+
+  box-shadow:
+    0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+.dark-theme .navbar-links a {
+  color: #d0d0d0;
+}
+
+.dark-theme .navbar-links a:hover {
+  background: #343039;
+  color: #ffffff;
+}
+
+.dark-theme .navbar-logo {
+  color: #ffffff;
+}
+
+.dark-theme .sign-in-button {
+  color: #ffffff;
+}
+
+.dark-theme .sign-in-button:hover {
+  background: #343039;
+}
+
+
+/* =========================================================
+   THEME BUTTON
+   ========================================================= */
+
+.dark-theme .theme-button {
+  background: #343039;
+  color: #d8c5ff;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.dark-theme footer {
+  background: #151515 !important;
+  color: #ffffff !important;
+  border-top-color: #3f3f3f !important;
+}
+
+.dark-theme footer p,
+.dark-theme footer span {
+  color: #bdbdbd;
+}
+
+
+/* =========================================================
+   IMAGES / VISUAL AREAS
+   ========================================================= */
+
+.dark-theme .image-container,
+.dark-theme .visual-container {
+  background: #292929 !important;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+.dark-theme .home {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(139, 92, 246, 0.08),
+      transparent 35%
+    ),
+    #181818 !important;
+}
+
+.dark-theme .home h1 {
+  color: #ffffff;
+}
+
+.dark-theme .home-content > p {
+  color: #d0d0d0;
+}
+
+.dark-theme .home-badge {
+  background: #292929;
+  border-color: #454545;
+  color: #b794f6;
+}
+
+.dark-theme .home-stat {
+  background: #292929;
+  border-color: #404040;
+}
+
+.dark-theme .home-stat strong {
+  color: #ffffff;
+}
+
+.dark-theme .home-stat span {
+  color: #a8a8a8;
+}
+
+.dark-theme .home-stat-icon {
+  background: #37303f;
+  color: #c4a7ff;
+}
+
+.dark-theme .fashion-card {
+  background: #292929;
+  border-color: #454545;
+}
+
+.dark-theme .fashion-card-header {
+  color: #ffffff;
+}
+
+.dark-theme .fashion-info {
+  color: #ffffff;
+}
+
+.dark-theme .fashion-title-row h3 {
+  color: #ffffff;
+}
+
+.dark-theme .fashion-title-row p {
+  color: #a8a8a8;
+}
+
+
+/* =========================================================
+   AI OUTFIT
+   ========================================================= */
+
+.dark-theme .ai-outfit-section {
+  background: #181818 !important;
+  color: #ffffff;
+}
+
+.dark-theme .ai-generator-card,
+.dark-theme .generated-outfit,
+.dark-theme .ai-empty-state,
+.dark-theme .ai-styling-analysis,
+.dark-theme .ai-styling-tips,
+.dark-theme .ai-outfit-summary,
+.dark-theme .ai-refinement-card {
+  background: #292929 !important;
+  border-color: #414141 !important;
+  color: #ffffff;
+}
+
+.dark-theme .ai-weather-context-item,
+.dark-theme .ai-weather-advice {
+  background: #292929 !important;
+  border-color: #414141 !important;
+}
+
+.dark-theme .ai-option {
+  background: #333333 !important;
+  border-color: #4a4a4a !important;
+  color: #dddddd;
+}
+
+.dark-theme .ai-select {
+  background: #333333 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .ai-request-group textarea {
+  background: #333333 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .ai-generator-features > div {
+  background: #333333 !important;
+  border-color: #444444 !important;
+  color: #d0d0d0;
+}
+
+.dark-theme .outfit-piece {
+  background: #292929 !important;
+  border-color: #444444 !important;
+}
+
+.dark-theme .piece-image {
+  background: #333333 !important;
+}
+
+.dark-theme .ai-outfit-description,
+.dark-theme .ai-result-message,
+.dark-theme .ai-weather-recommendation,
+.dark-theme .tip-item,
+.dark-theme .summary-item {
+  background: #333333 !important;
+  border-color: #454545 !important;
+}
+
+.dark-theme .piece-info h3,
+.dark-theme .summary-item strong,
+.dark-theme .ai-result-message strong {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MY CLOSET
+   ========================================================= */
+
+.dark-theme .my-closet,
+.dark-theme .closet-page {
+  background: #181818 !important;
+  color: #ffffff;
+}
+
+.dark-theme .closet-card {
+  background: #292929 !important;
+  border-color: #444444 !important;
+}
+
+.dark-theme .closet-card h3 {
+  color: #ffffff;
+}
+
+.dark-theme .closet-card p {
+  color: #c0c0c0;
+}
+
+
+/* =========================================================
+   WEATHER
+   ========================================================= */
+
+.dark-theme .weather,
+.dark-theme .weather-page {
+  background: #181818 !important;
+  color: #ffffff;
+}
+
+.dark-theme .weather-card {
+  background: #292929 !important;
+  border-color: #444444 !important;
+}
+
+.dark-theme .weather-card h2,
+.dark-theme .weather-card h3 {
+  color: #ffffff;
+}
+
+.dark-theme .weather-card p,
+.dark-theme .weather-card span {
+  color: #c0c0c0;
+}
+
+
+/* =========================================================
+   FAVORITES
+   ========================================================= */
+
+.dark-theme .favorites,
+.dark-theme .favorites-page {
+  background: #181818 !important;
+  color: #ffffff;
+}
+
+.dark-theme .favorite-card {
+  background: #292929 !important;
+  border-color: #444444 !important;
+}
+
+.dark-theme .favorite-card h3 {
+  color: #ffffff;
+}
+
+.dark-theme .favorite-card p {
+  color: #c0c0c0;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.dark-theme::-webkit-scrollbar,
+.dark-theme *::-webkit-scrollbar {
+  width: 9px;
+}
+
+.dark-theme::-webkit-scrollbar-track,
+.dark-theme *::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+.dark-theme::-webkit-scrollbar-thumb,
+.dark-theme *::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 10px;
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover,
+.dark-theme *::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+.dark-theme ::selection {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TRANSITION
+   ========================================================= */
+
+.app,
+.app *,
+body {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}/* =========================================================
+   AI OUTFIT TITLE
+========================================================= */
+
+.ai-outfit-header h1 .ai-outfit-title-highlight {
+  color: #8b5cf6 !important;
+  font-weight: 700 !important;
+}
+
+.dark-theme .ai-outfit-header h1 .ai-outfit-title-highlight {
+  color: #a78bfa !important;
+  font-weight: 700 !important;
+}

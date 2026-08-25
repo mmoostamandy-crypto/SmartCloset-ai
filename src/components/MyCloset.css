@@ -1,0 +1,2804 @@
+/* =========================================================
+   SMARTCLOSET — MY CLOSET
+   Clean & Responsive Styles
+========================================================= */
+
+.my-closet {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 120px 7% 80px;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(139, 92, 246, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(124, 58, 237, 0.1),
+      transparent 30%
+    ),
+    #ffffff;
+  color: #24153f;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.closet-header {
+  max-width: 1250px;
+  margin: 0 auto 45px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.closet-header-content {
+  max-width: 700px;
+}
+
+.closet-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #7c3aed;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.closet-header h1 {
+  margin: 0;
+  color: #24153f;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.closet-header h1 strong {
+  color: #7c3aed;
+  font-weight: 800;
+}
+
+.closet-header p {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: #766b84;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   BUTTON — ADD ITEM
+========================================================= */
+
+.add-item-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6d28d9
+  );
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px rgba(124, 58, 237, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.add-item-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 18px 38px rgba(124, 58, 237, 0.3);
+}
+
+.add-item-btn:active {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.closet-summary {
+  max-width: 1250px;
+  margin: 0 auto 42px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.summary-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #eee7f8;
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 35px rgba(76, 29, 149, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  border-color: #d8c4fa;
+
+  box-shadow:
+    0 16px 40px rgba(76, 29, 149, 0.1);
+}
+
+.summary-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #f3edff;
+  color: #7c3aed;
+}
+
+.summary-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-card strong {
+  color: #2e1750;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.summary-card span {
+  color: #887c96;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ADD / EDIT PANEL
+========================================================= */
+
+.add-item-panel {
+  max-width: 900px;
+  margin: 0 auto 45px;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e9ddf8;
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 60px rgba(76, 29, 149, 0.1);
+}
+
+.add-item-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.add-item-header > div {
+  min-width: 0;
+}
+
+.add-item-header span {
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.add-item-header h2 {
+  margin: 7px 0 0;
+  color: #2e1750;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.close-form-btn {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #eadff7;
+  border-radius: 12px;
+
+  background: #faf8ff;
+  color: #6d28d9;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.close-form-btn:hover {
+  background: #f0e8ff;
+  border-color: #cbb1f4;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.closet-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  color: #432663;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #e3d8ef;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #302040;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #aaa0b3;
+}
+
+/* =========================================================
+   IMAGE UPLOAD
+========================================================= */
+
+.image-upload-group {
+  grid-column: 1 / -1;
+}
+
+.image-upload-box {
+  position: relative;
+
+  width: 100%;
+  min-height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border: 2px dashed #d8c6ef;
+  border-radius: 18px;
+
+  background: #fbf9ff;
+  color: #7c3aed;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.image-upload-box:hover {
+  border-color: #8b5cf6;
+  background: #f7f1ff;
+}
+
+.image-upload-box input {
+  display: none;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-placeholder span {
+  color: #5b3b78;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.upload-placeholder small {
+  color: #9a8da5;
+  font-size: 11px;
+}
+
+.image-preview-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-height: 210px;
+}
+
+.image-preview-wrapper img {
+  width: 100%;
+  height: 210px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.image-preview-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  background: rgba(54, 26, 83, 0.55);
+
+  color: #ffffff;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.image-upload-box:hover .image-preview-overlay {
+  opacity: 1;
+}
+
+.image-preview-overlay span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 5px;
+}
+
+.cancel-form-btn,
+.save-item-btn {
+  font-family: inherit;
+}
+
+.cancel-form-btn {
+  padding: 13px 20px;
+
+  border: 1px solid #dfd3eb;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #624b73;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cancel-form-btn:hover {
+  background: #f8f3ff;
+  border-color: #cdb6e8;
+}
+
+.save-item-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 13px 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #7c3aed;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.save-item-btn:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.closet-toolbar {
+  max-width: 1250px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 18px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #eee6f8;
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 30px rgba(76, 29, 149, 0.05);
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.closet-search {
+  min-width: 250px;
+  flex: 1;
+
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+  box-sizing: border-box;
+
+  border: 1px solid #e5dcef;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #8b5cf6;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.closet-search:focus-within {
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 0 4px rgba(139, 92, 246, 0.09);
+}
+
+.closet-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #352044;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.closet-search input::placeholder {
+  color: #a59aaa;
+}
+
+.clear-search-btn {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f3edff;
+  color: #7c3aed;
+
+  cursor: pointer;
+}
+
+.clear-search-btn:hover {
+  background: #e9ddff;
+}
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+.closet-filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  flex-shrink: 0;
+
+  color: #765c8b;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.filter-title svg {
+  color: #8b5cf6;
+}
+
+.closet-filters {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.filter-btn,
+.favorites-filter-btn,
+.reset-filters-btn {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e9d5ff;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #6d28d9;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.filter-btn:hover,
+.favorites-filter-btn:hover {
+  color: #ffffff;
+  background: #7c3aed;
+  border-color: #7c3aed;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(124, 58, 237, 0.2);
+}
+
+.filter-btn.active,
+.favorites-filter-btn.active {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #9333ea
+  );
+
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 7px 18px rgba(124, 58, 237, 0.24);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.reset-filters-btn {
+  color: #7c3aed;
+  background: #faf5ff;
+}
+
+.reset-filters-btn:hover {
+  color: #ffffff;
+  background: #7c3aed;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+.closet-categories {
+  max-width: 1250px;
+  margin: 0 auto 35px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 17px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #eee6f7;
+  border-radius: 17px;
+
+  box-shadow:
+    0 7px 25px rgba(76, 29, 149, 0.045);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  border-color: #d4c0ed;
+}
+
+.category-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #f3edff;
+  color: #7c3aed;
+}
+
+.category-card div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.category-card strong {
+  color: #32194b;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.category-card span {
+  color: #91849c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CLOSET GRID
+   DESKTOP = 4 CARDS SIDE BY SIDE
+========================================================= */
+
+.closet-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* =========================================================
+   CLOSET ITEM
+========================================================= */
+
+.closet-item {
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #eee5f7;
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 35px rgba(76, 29, 149, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.closet-item:hover {
+  transform: translateY(-6px);
+
+  border-color: #d5c0ef;
+
+  box-shadow:
+    0 20px 45px rgba(76, 29, 149, 0.12);
+}
+
+/* =========================================================
+   CLOTHING IMAGE
+========================================================= */
+
+.closet-item-image {
+  position: relative;
+
+  width: 100%;
+  height: 290px;
+
+  overflow: hidden;
+
+  background: #f8f4fc;
+}
+
+.closet-item-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.45s ease;
+}
+
+.closet-item:hover
+.closet-item-image img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+========================================================= */
+
+.new-item-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f0ff,
+      #eee4fa
+    );
+
+  color: #9b72d2;
+}
+
+/* =========================================================
+   CARD ACTIONS
+   FAVORITE + EDIT + DELETE
+========================================================= */
+
+.item-actions {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 6px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 22px rgba(76, 29, 149, 0.14);
+
+  backdrop-filter: blur(10px);
+}
+
+.favorite-item-btn,
+.edit-item-btn,
+.delete-item-btn {
+  position: static;
+
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e9d5ff;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #6d28d9;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.favorite-item-btn:hover,
+.edit-item-btn:hover,
+.delete-item-btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.favorite-item-btn:hover,
+.favorite-item-btn.active {
+  background: #7c3aed;
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 6px 14px rgba(124, 58, 237, 0.28);
+}
+
+.edit-item-btn:hover {
+  background: #9333ea;
+  border-color: #9333ea;
+
+  box-shadow:
+    0 6px 14px rgba(147, 51, 234, 0.28);
+}
+
+.delete-item-btn:hover {
+  background: #6d28d9;
+  border-color: #6d28d9;
+
+  box-shadow:
+    0 6px 14px rgba(109, 40, 217, 0.28);
+}
+
+.favorite-item-btn:active,
+.edit-item-btn:active,
+.delete-item-btn:active {
+  transform: scale(0.94);
+}
+
+/* =========================================================
+   ITEM INFORMATION
+========================================================= */
+
+.closet-item-info {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 18px 19px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+.closet-item-title {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.closet-item-info h3 {
+  margin: 0 0 6px;
+
+  color: #301844;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.closet-item-info span {
+  color: #91849c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   FAVORITE STATUS
+========================================================= */
+
+.favorite-status {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 8px;
+
+  border-radius: 9px;
+
+  background: #f3edff;
+  color: #7c3aed;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.no-results {
+  max-width: 700px;
+  margin: 45px auto;
+
+  padding: 45px 25px;
+
+  text-align: center;
+
+  border: 1px solid #eee5f7;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(76, 29, 149, 0.06);
+}
+
+.no-results-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #f3edff;
+  color: #7c3aed;
+}
+
+.no-results h2 {
+  margin: 0 0 10px;
+
+  color: #301844;
+
+  font-size: 24px;
+}
+
+.no-results p {
+  margin: 0 auto 22px;
+
+  max-width: 450px;
+
+  color: #81758d;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.no-results .reset-filters-btn {
+  margin: 0 auto;
+}
+
+/* =========================================================
+   EMPTY CLOSET
+========================================================= */
+
+.empty-closet {
+  max-width: 700px;
+  min-height: 350px;
+
+  margin: 40px auto 0;
+  padding: 50px 25px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid #eee5f7;
+  border-radius: 26px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 45px rgba(76, 29, 149, 0.07);
+}
+
+.empty-closet-icon {
+  width: 78px;
+  height: 78px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 24px;
+
+  background: #f3edff;
+  color: #7c3aed;
+}
+
+.empty-closet h2 {
+  margin: 0 0 10px;
+
+  color: #301844;
+
+  font-size: 26px;
+}
+
+.empty-closet p {
+  max-width: 480px;
+
+  margin: 0 0 25px;
+
+  color: #81758d;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TOAST MESSAGE
+========================================================= */
+
+.closet-message {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 1000;
+
+  max-width: 380px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 17px;
+
+  border: 1px solid #dfd2f0;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  color: #432663;
+
+  box-shadow:
+    0 15px 40px rgba(45, 20, 70, 0.15);
+
+  backdrop-filter: blur(12px);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.message-icon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f3edff;
+  color: #7c3aed;
+}
+
+/* =========================================================
+   DELETE OVERLAY
+========================================================= */
+
+.delete-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(30, 15, 48, 0.48);
+
+  backdrop-filter: blur(7px);
+}
+
+.delete-modal {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  border: 1px solid #eadff7;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 80px rgba(30, 15, 48, 0.25);
+
+  text-align: center;
+}
+
+.delete-modal-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #f3edff;
+  color: #7c3aed;
+}
+
+.delete-modal h3 {
+  margin: 0 0 10px;
+
+  color: #301844;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.delete-modal p {
+  margin: 0;
+
+  color: #81758d;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.delete-modal p strong {
+  color: #432663;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.delete-cancel-btn,
+.delete-confirm-btn {
+  min-height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 0 18px;
+
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.delete-cancel-btn {
+  border: 1px solid #dfd3eb;
+
+  background: #ffffff;
+  color: #624b73;
+}
+
+.delete-cancel-btn:hover {
+  background: #f8f3ff;
+  border-color: #cdb6e8;
+}
+
+.delete-confirm-btn {
+  border: 1px solid #7c3aed;
+
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.delete-confirm-btn:hover {
+  background: #6d28d9;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(124, 58, 237, 0.24);
+}
+
+/* =========================================================
+   SMART OUTFIT
+========================================================= */
+
+.smart-outfit-section {
+  max-width: 1250px;
+
+  margin: 35px auto 0;
+  padding: 24px;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(139, 92, 246, 0.16);
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(245, 240, 255, 0.95)
+  );
+
+  box-shadow:
+    0 12px 35px rgba(91, 33, 182, 0.08);
+}
+
+.smart-outfit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+.smart-outfit-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #8b5cf6;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.smart-outfit-header h2 {
+  margin: 0;
+
+  color: #241b35;
+
+  font-size: 24px;
+}
+
+.smart-outfit-header p {
+  margin: 7px 0 0;
+
+  color: #746b82;
+
+  font-size: 14px;
+}
+
+.generate-outfit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #8b5cf6;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.generate-outfit-btn:hover {
+  background: #7c3aed;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   SMART OUTFIT GRID
+   DESKTOP = 4 SIDE BY SIDE
+========================================================= */
+
+.smart-outfit-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.smart-outfit-item {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #eee7f7;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 6px 20px rgba(91, 33, 182, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.smart-outfit-item:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 28px rgba(91, 33, 182, 0.12);
+}
+
+.smart-outfit-image {
+  width: 100%;
+  height: 240px;
+
+  overflow: hidden;
+
+  background: #f7f4fc;
+}
+
+.smart-outfit-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.smart-outfit-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f4fc;
+  color: #a78bfa;
+}
+
+.smart-outfit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 14px;
+}
+
+.smart-outfit-info strong {
+  display: block;
+
+  color: #292231;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.smart-outfit-info span {
+  color: #8b8295;
+  font-size: 12px;
+}
+
+.smart-outfit-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 25px;
+
+  border-radius: 14px;
+
+  background: rgba(139, 92, 246, 0.06);
+
+  color: #766b85;
+
+  text-align: center;
+}
+
+.smart-outfit-empty p {
+  margin: 0;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .my-closet {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .closet-grid,
+  .smart-outfit-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .closet-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .closet-search {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+
+  .closet-filter-wrapper {
+    flex: 1;
+  }
+}
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .closet-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .closet-categories {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .closet-grid,
+  .smart-outfit-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .closet-header {
+    align-items: flex-start;
+  }
+
+  .smart-outfit-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .generate-outfit-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .my-closet {
+    padding: 100px 16px 60px;
+  }
+
+  /* HEADER */
+
+  .closet-header {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 22px;
+
+    margin-bottom: 30px;
+  }
+
+  .closet-label {
+    font-size: 10px;
+  }
+
+  .closet-header h1 {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .closet-header p {
+    margin-top: 14px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .add-item-btn {
+    width: 100%;
+  }
+
+  /* SUMMARY */
+
+  .closet-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+  }
+
+  .summary-card {
+    min-height: 88px;
+
+    padding: 13px;
+
+    gap: 10px;
+
+    border-radius: 16px;
+  }
+
+  .summary-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 11px;
+  }
+
+  .summary-card strong {
+    font-size: 20px;
+  }
+
+  .summary-card span {
+    font-size: 10px;
+  }
+
+  /* FORM */
+
+  .add-item-panel {
+    padding: 20px;
+
+    margin-bottom: 30px;
+
+    border-radius: 20px;
+  }
+
+  .add-item-header h2 {
+    font-size: 20px;
+  }
+
+  .closet-form {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .image-upload-group {
+    grid-column: auto;
+  }
+
+  .form-actions {
+    grid-column: auto;
+
+    flex-direction: column;
+  }
+
+  .cancel-form-btn,
+  .save-item-btn {
+    width: 100%;
+  }
+
+  /* TOOLBAR */
+
+  .closet-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 14px;
+
+    padding: 14px;
+
+    border-radius: 18px;
+  }
+
+  .closet-search {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .closet-filter-wrapper {
+    width: 100%;
+
+    display: block;
+  }
+
+  .filter-title {
+    margin-bottom: 9px;
+  }
+
+  .closet-filters {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: none;
+  }
+
+  .closet-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+  }
+
+  .favorites-filter-btn {
+    width: 100%;
+  }
+
+  .reset-filters-btn {
+    width: 100%;
+  }
+
+  /* CATEGORY */
+
+  .closet-categories {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+  }
+
+  .category-card {
+    padding: 13px;
+
+    gap: 9px;
+
+    border-radius: 14px;
+  }
+
+  .category-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+  }
+
+  .category-card strong {
+    font-size: 18px;
+  }
+
+  /* CLOSET GRID */
+
+  .closet-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .closet-item {
+    border-radius: 17px;
+  }
+
+  .closet-item-image {
+    height: 210px;
+  }
+
+  .closet-item-info {
+    min-height: 72px;
+
+    padding: 12px;
+
+    display: block;
+  }
+
+  .closet-item-info h3 {
+    margin-bottom: 5px;
+
+    font-size: 13px;
+  }
+
+  .closet-item-info span {
+    font-size: 10px;
+  }
+
+  /* ACTIONS */
+
+  .item-actions {
+    top: 8px;
+    right: 8px;
+
+    gap: 5px;
+
+    padding: 5px;
+
+    border-radius: 11px;
+  }
+
+  .favorite-item-btn,
+  .edit-item-btn,
+  .delete-item-btn {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+
+    border-radius: 8px;
+  }
+
+  .favorite-item-btn svg,
+  .edit-item-btn svg,
+  .delete-item-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .favorite-status {
+    display: none;
+  }
+
+  /* EMPTY */
+
+  .empty-closet {
+    min-height: 280px;
+
+    padding: 35px 18px;
+
+    border-radius: 22px;
+  }
+
+  .empty-closet h2 {
+    font-size: 21px;
+  }
+
+  /* NO RESULTS */
+
+  .no-results {
+    padding: 35px 18px;
+
+    border-radius: 20px;
+  }
+
+  .no-results h2 {
+    font-size: 20px;
+  }
+
+  /* DELETE MODAL */
+
+  .delete-modal {
+    padding: 24px;
+
+    border-radius: 22px;
+  }
+
+  .delete-modal-actions {
+    flex-direction: column;
+  }
+
+  .delete-cancel-btn,
+  .delete-confirm-btn {
+    width: 100%;
+  }
+
+  /* TOAST */
+
+  .closet-message {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+
+    max-width: none;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  /* SMART OUTFIT */
+
+  .smart-outfit-section {
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .smart-outfit-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .smart-outfit-header h2 {
+    font-size: 20px;
+  }
+
+  .generate-outfit-btn {
+    width: 100%;
+  }
+
+  .smart-outfit-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .smart-outfit-image {
+    height: 210px;
+  }
+
+  .smart-outfit-info {
+    padding: 11px;
+  }
+
+  .smart-outfit-info strong {
+    font-size: 13px;
+  }
+
+  .smart-outfit-info span {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .my-closet {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .closet-header h1 {
+    font-size: 34px;
+  }
+
+  .closet-grid {
+    gap: 9px;
+  }
+
+  .closet-item-image {
+    height: 185px;
+  }
+
+  .item-actions {
+    top: 6px;
+    right: 6px;
+
+    gap: 3px;
+
+    padding: 4px;
+  }
+
+  .favorite-item-btn,
+  .edit-item-btn,
+  .delete-item-btn {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+  }
+
+  .category-card {
+    padding: 10px;
+  }
+
+  .category-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .category-card strong {
+    font-size: 16px;
+  }
+}/* =========================================================
+   RECOMMENDED OUTFIT
+   Same style as My Closet clothing cards
+========================================================= */
+
+.smart-outfit-section {
+  width: 100%;
+  margin-top: 35px;
+  padding: 25px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #eee5f7;
+  border-radius: 22px;
+
+  box-shadow: 0 10px 35px rgba(76, 29, 149, 0.06);
+}
+
+/* HEADER */
+
+.smart-outfit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.smart-outfit-label {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.smart-outfit-header h2 {
+  margin: 0;
+
+  color: #301844;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.smart-outfit-header p {
+  margin: 7px 0 0;
+
+  color: #81758d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* GENERATE BUTTON */
+
+.generate-outfit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6d28d9
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.18);
+
+  transition: all 0.2s ease;
+}
+
+.generate-outfit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(124, 58, 237, 0.25);
+}
+
+/* =========================================================
+   OUTFIT CARDS
+========================================================= */
+
+.smart-outfit-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* CARD */
+
+.smart-outfit-item {
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #eee5f7;
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 35px rgba(76, 29, 149, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.smart-outfit-item:hover {
+  transform: translateY(-6px);
+
+  border-color: #d5c0ef;
+
+  box-shadow:
+    0 20px 45px rgba(76, 29, 149, 0.12);
+}
+
+/* =========================================================
+   CLOTHING IMAGE
+========================================================= */
+
+.smart-outfit-image {
+  position: relative;
+
+  width: 100%;
+  height: 290px;
+
+  overflow: hidden;
+
+  background: #f8f4fc;
+}
+
+.smart-outfit-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.45s ease;
+}
+
+.smart-outfit-item:hover
+.smart-outfit-image img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+========================================================= */
+
+.smart-outfit-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f0ff,
+      #eee4fa
+    );
+
+  color: #9b72d2;
+}
+
+/* =========================================================
+   OUTFIT INFORMATION
+========================================================= */
+
+.smart-outfit-info {
+  min-height: 82px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 18px 19px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+.smart-outfit-info strong {
+  display: block;
+
+  color: #301844;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.smart-outfit-info span {
+  color: #91849c;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   EMPTY RECOMMENDATION
+========================================================= */
+
+.smart-outfit-empty {
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #eee5f7;
+  border-radius: 18px;
+
+  background: #faf8ff;
+
+  color: #81758d;
+
+  text-align: center;
+}
+
+.smart-outfit-empty p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .smart-outfit-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .smart-outfit-image {
+    height: 250px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .smart-outfit-section {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .smart-outfit-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .generate-outfit-btn {
+    width: 100%;
+  }
+
+  .smart-outfit-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .smart-outfit-image {
+    height: 210px;
+  }
+
+  .smart-outfit-info {
+    padding: 13px;
+  }
+
+  .smart-outfit-info strong {
+    font-size: 13px;
+  }
+
+  .smart-outfit-info span {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .smart-outfit-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .smart-outfit-image {
+    height: 175px;
+  }
+
+  .smart-outfit-info {
+    padding: 10px;
+  }
+
+  .smart-outfit-info strong {
+    font-size: 12px;
+  }
+}/* =========================================================
+   SMARTCLOSET — DARK MODE OVERRIDE
+   All cards black + white/light-purple text
+========================================================= */
+
+[data-theme="dark"] .my-closet {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(139, 92, 246, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(124, 58, 237, 0.08),
+      transparent 30%
+    ),
+    #252525;
+
+  color: #ffffff;
+}
+
+/* =========================
+   HEADERS
+========================= */
+
+[data-theme="dark"] .closet-header h1 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .closet-header h1 strong {
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .closet-header p {
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .closet-label {
+  color: #c4b5fd;
+}
+
+/* =========================
+   ALL MAIN CARDS
+========================= */
+
+[data-theme="dark"] .summary-card,
+[data-theme="dark"] .add-item-panel,
+[data-theme="dark"] .closet-toolbar,
+[data-theme="dark"] .category-card,
+[data-theme="dark"] .closet-item,
+[data-theme="dark"] .no-results,
+[data-theme="dark"] .empty-closet,
+[data-theme="dark"] .smart-outfit-section,
+[data-theme="dark"] .smart-outfit-item,
+[data-theme="dark"] .delete-modal {
+  background: #000000;
+  border-color: #333333;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+[data-theme="dark"] .summary-card strong,
+[data-theme="dark"] .category-card strong,
+[data-theme="dark"] .closet-item-info h3,
+[data-theme="dark"] .no-results h2,
+[data-theme="dark"] .empty-closet h2,
+[data-theme="dark"] .delete-modal h3,
+[data-theme="dark"] .smart-outfit-header h2,
+[data-theme="dark"] .smart-outfit-info strong {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .summary-card span,
+[data-theme="dark"] .category-card span,
+[data-theme="dark"] .closet-item-info span,
+[data-theme="dark"] .no-results p,
+[data-theme="dark"] .empty-closet p,
+[data-theme="dark"] .delete-modal p,
+[data-theme="dark"] .smart-outfit-header p,
+[data-theme="dark"] .smart-outfit-info span {
+  color: #c4b5fd;
+}
+
+/* =========================
+   ICON BOXES
+========================= */
+
+[data-theme="dark"] .summary-icon,
+[data-theme="dark"] .category-icon,
+[data-theme="dark"] .no-results-icon,
+[data-theme="dark"] .empty-closet-icon,
+[data-theme="dark"] .delete-modal-icon,
+[data-theme="dark"] .message-icon {
+  background: #181818;
+  color: #c4b5fd;
+  border: 1px solid #333333;
+}
+
+/* =========================
+   ADD ITEM FORM
+========================= */
+
+[data-theme="dark"] .add-item-header span {
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .add-item-header h2 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .close-form-btn {
+  background: #111111;
+  color: #c4b5fd;
+  border-color: #333333;
+}
+
+[data-theme="dark"] .close-form-btn:hover {
+  background: #1f1f1f;
+  border-color: #6d28d9;
+}
+
+/* =========================
+   FORM LABELS
+========================= */
+
+[data-theme="dark"] .form-group label {
+  color: #ffffff;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select {
+  background: #111111;
+  color: #ffffff;
+  border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group select:focus {
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+[data-theme="dark"] .form-group input::placeholder {
+  color: #777777;
+}
+
+/* =========================
+   IMAGE UPLOAD
+========================= */
+
+[data-theme="dark"] .image-upload-box {
+  background: #111111;
+  color: #c4b5fd;
+  border-color: #4a4a4a;
+}
+
+[data-theme="dark"] .image-upload-box:hover {
+  background: #181818;
+  border-color: #8b5cf6;
+}
+
+[data-theme="dark"] .upload-placeholder span {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .upload-placeholder small {
+  color: #aaa0c0;
+}
+
+/* =========================
+   FORM BUTTON
+========================= */
+
+[data-theme="dark"] .cancel-form-btn {
+  background: #111111;
+  color: #ffffff;
+  border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .cancel-form-btn:hover {
+  background: #1d1d1d;
+  border-color: #6d28d9;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+[data-theme="dark"] .closet-search {
+  background: #111111;
+  color: #c4b5fd;
+  border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .closet-search input {
+  background: transparent;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .closet-search input::placeholder {
+  color: #777777;
+}
+
+[data-theme="dark"] .clear-search-btn {
+  background: #1b1b1b;
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .clear-search-btn:hover {
+  background: #292929;
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+[data-theme="dark"] .filter-title {
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .filter-btn,
+[data-theme="dark"] .favorites-filter-btn,
+[data-theme="dark"] .reset-filters-btn {
+  background: #111111;
+  color: #c4b5fd;
+  border-color: #3d3d3d;
+}
+
+[data-theme="dark"] .filter-btn:hover,
+[data-theme="dark"] .favorites-filter-btn:hover,
+[data-theme="dark"] .reset-filters-btn:hover {
+  background: #7c3aed;
+  color: #ffffff;
+  border-color: #7c3aed;
+}
+
+[data-theme="dark"] .filter-btn.active,
+[data-theme="dark"] .favorites-filter-btn.active {
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #9333ea
+  );
+
+  color: #ffffff;
+  border-color: #8b5cf6;
+}
+
+/* =========================
+   CLOTHING IMAGE AREA
+========================= */
+
+[data-theme="dark"] .closet-item-image,
+[data-theme="dark"] .smart-outfit-image {
+  background: #111111;
+}
+
+[data-theme="dark"] .new-item-placeholder,
+[data-theme="dark"] .smart-outfit-placeholder {
+  background:
+    linear-gradient(
+      135deg,
+      #111111,
+      #1c1526
+    );
+
+  color: #a78bfa;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+[data-theme="dark"] .item-actions {
+  background: rgba(0, 0, 0, 0.92);
+  border-color: #333333;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .favorite-item-btn,
+[data-theme="dark"] .edit-item-btn,
+[data-theme="dark"] .delete-item-btn {
+  background: #111111;
+  color: #c4b5fd;
+  border-color: #3d3d3d;
+}
+
+[data-theme="dark"] .favorite-item-btn:hover,
+[data-theme="dark"] .favorite-item-btn.active,
+[data-theme="dark"] .edit-item-btn:hover,
+[data-theme="dark"] .delete-item-btn:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   FAVORITE STATUS
+========================= */
+
+[data-theme="dark"] .favorite-status {
+  background: #18121f;
+  color: #c4b5fd;
+  border: 1px solid #352747;
+}
+
+/* =========================
+   SMART OUTFIT
+========================= */
+
+[data-theme="dark"] .smart-outfit-section {
+  background: #000000;
+}
+
+[data-theme="dark"] .smart-outfit-label {
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .smart-outfit-empty {
+  background: #111111;
+  color: #c4b5fd;
+  border-color: #333333;
+}
+
+[data-theme="dark"] .smart-outfit-item {
+  background: #000000;
+}
+
+[data-theme="dark"] .smart-outfit-info {
+  background: #000000;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+[data-theme="dark"] .closet-message {
+  background: rgba(0, 0, 0, 0.96);
+  color: #ffffff;
+  border-color: #3a3a3a;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* =========================
+   DELETE MODAL
+========================= */
+
+[data-theme="dark"] .delete-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+[data-theme="dark"] .delete-modal {
+  background: #000000;
+  border-color: #333333;
+}
+
+[data-theme="dark"] .delete-modal p strong {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .delete-cancel-btn {
+  background: #111111;
+  color: #ffffff;
+  border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .delete-cancel-btn:hover {
+  background: #1c1c1c;
+}
+
+/* =========================
+   HOVER CARDS
+========================= */
+
+[data-theme="dark"] .summary-card:hover,
+[data-theme="dark"] .category-card:hover,
+[data-theme="dark"] .closet-item:hover,
+[data-theme="dark"] .smart-outfit-item:hover,
+[data-theme="dark"] .no-results:hover,
+[data-theme="dark"] .empty-closet:hover {
+  border-color: #4c2a70;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.6);
+}
