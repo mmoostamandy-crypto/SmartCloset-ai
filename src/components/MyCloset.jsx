@@ -547,20 +547,24 @@ function MyCloset() {
           HEADER
       ================================================= */}
 
-      <div className="closet-header-content">
-  <span className="closet-label">
-    My digital wardrobe
-  </span>
-  <h1>
-    My <strong>Closet</strong>
-  </h1>
-  <p>
-    Organize your clothes, save your favorites,
-    and create beautiful outfits from your wardrobe.
-  </p>
-</div>
+      <div className="closet-header">
 
-<div>
+        <div className="closet-header-content">
+
+          <span className="closet-label">
+            MY DIGITAL WARDROBE
+          </span>
+
+          <h1>
+            My <strong>Closet</strong>
+          </h1>
+
+          <p>
+            Organize your clothes, save your favorites,
+            and create beautiful outfits from your wardrobe.
+          </p>
+
+        </div>
 
         <button
           type="button"

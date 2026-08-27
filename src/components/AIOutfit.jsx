@@ -552,13 +552,13 @@ function AIOutfit() {
 
     const previousItems = outfit
       ? [
-          outfit.top?.name,
-          outfit.bottom?.name,
-          outfit.shoes?.name,
-          outfit.outerwear?.name,
-        ]
-          .filter(Boolean)
-          .join(", ")
+        outfit.top?.name,
+        outfit.bottom?.name,
+        outfit.shoes?.name,
+        outfit.outerwear?.name,
+      ]
+        .filter(Boolean)
+        .join(", ")
       : "No previous outfit";
 
 
@@ -628,8 +628,8 @@ ${buildUserRequest()}
       // BACKEND REQUEST
       // =================================================
 
-      const response = await fetch(
-        "http://localhost:5000/api/ai-outfit",
+      const response = await fetch(import.meta.env.VITE_API_URL || "http://localhost:5000/api/ai-outfit",
+
         {
           method: "POST",
 
@@ -1078,34 +1078,34 @@ ${buildUserRequest()}
       >
 
         <div className="ai-outfit-header">
-  <span className="ai-outfit-label">
-    AI personal stylist
-  </span>
-  <h1>
-    Your AI{" "}
-    <strong>Outfit</strong>
-  </h1>
-  <p>
-    Your personal AI stylist uses
-    your wardrobe and current
-    conditions to build a complete
-    look.
-  </p>
-</div>
-<div className="ai-empty-state">
-  <div className="ai-empty-icon">
-    <Shirt size={42} />
-  </div>
-  <h2>
-    Your closet is empty
-  </h2>
-  <p>
-    Add some clothing items to
-    My Closet first. Then your AI
-    stylist can use those pieces to
-    create personalized outfits.
-  </p>
-</div>
+          <span className="ai-outfit-label">
+            AI personal stylist
+          </span>
+          <h1>
+            Your AI{" "}
+            <strong>Outfit</strong>
+          </h1>
+          <p>
+            Your personal AI stylist uses
+            your wardrobe and current
+            conditions to build a complete
+            look.
+          </p>
+        </div>
+        <div className="ai-empty-state">
+          <div className="ai-empty-icon">
+            <Shirt size={42} />
+          </div>
+          <h2>
+            Your closet is empty
+          </h2>
+          <p>
+            Add some clothing items to
+            My Closet first. Then your AI
+            stylist can use those pieces to
+            create personalized outfits.
+          </p>
+        </div>
       </section>
 
     );
@@ -1128,21 +1128,22 @@ ${buildUserRequest()}
           HEADER
       ================================================= */}
 
-     <div> </div> className="ai-outfit-header"
-  <span className="ai-outfit-label">
-    AI personal stylist
-  </span>
-  <h1>
-    Your AI{" "}
-    <strong>Outfit</strong>
-  </h1>
-  <p>
-    Tell your AI stylist what you
-    want. It will analyze your closet,
-    weather, occasion, colors and style
-    preferences before making a recommendation.
-  </p>
-  <div></div>
+      <div> className="ai-outfit-header" 
+      <span className="ai-outfit-label">
+        AI personal stylist
+      </span>
+      </div> 
+      <h1>
+        Your AI{" "}
+        <strong>Outfit</strong>
+      </h1>
+      <p>
+        Tell your AI stylist what you
+        want. It will analyze your closet,
+        weather, occasion, colors and style
+        preferences before making a recommendation.
+      </p>
+      <div></div>
 
 
       {/* =================================================
@@ -1225,14 +1226,14 @@ ${buildUserRequest()}
           </div>
 
 
-         <h2>
-  What should I wear?
-</h2>
-<p>
-  Choose your preferences and let
-  your AI stylist create a personalized
-  look from your own wardrobe.
-</p>
+          <h2>
+            What should I wear?
+          </h2>
+          <p>
+            Choose your preferences and let
+            your AI stylist create a personalized
+            look from your own wardrobe.
+          </p>
 
           {/* OCCASION */}
 
@@ -1479,8 +1480,8 @@ ${buildUserRequest()}
               <WandSparkles size={20} />
 
               <span>
-  AI Stylist
-</span>
+                AI Stylist
+              </span>
 
             </div>
 
@@ -1504,7 +1505,7 @@ ${buildUserRequest()}
                   className="spin-icon"
                 />
 
-              Your stylist is analyzing your wardrobe...
+                Your stylist is analyzing your wardrobe...
               </>
 
             ) : (
@@ -1902,7 +1903,7 @@ ${buildUserRequest()}
             </button>
 
 
-            
+
           </div>
 
         </div>

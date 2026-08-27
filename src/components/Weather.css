@@ -42,20 +42,23 @@
   gap: 30px;
 }
 
-.weather-title h1 strong {
-  color: #7c3aed;
-  font-weight: 800;
+.weather-title {
+  max-width: 700px;
 }
 
 .weather-label {
   display: inline-block;
+
   margin-bottom: 12px;
+
   color: #8b5cf6;
+
   font-size: 12px;
   font-weight: 800;
+
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
+
 .weather-title h1 {
   margin: 0;
 
@@ -943,13 +946,8 @@
   color: #7c3aed;
 }
 
-.weather-outfit-content > span {
-  display: inline-block;
-  color: #8b5cf6;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+.outfit-weather-content {
+  flex: 1;
 }
 
 .outfit-weather-content > span {

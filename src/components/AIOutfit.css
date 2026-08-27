@@ -16,7 +16,6 @@
   margin: 0 0 42px;
 }
 
-
 .ai-outfit-label {
   display: inline-block;
   margin-bottom: 12px;
@@ -25,7 +24,6 @@
   font-weight: 900 !important;
   letter-spacing: 2px;
   line-height: 1.4;
-  text-transform: uppercase;
   text-shadow: 0 0 0.5px #7c3aed;
 }
 
@@ -40,7 +38,7 @@
 
 .ai-outfit-header h1 strong {
   color: #8b5cf6;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .ai-outfit-header p {

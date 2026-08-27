@@ -1,3 +1,11 @@
+:root {
+  --navbar-bg: #f8f8f8;
+}
+
+.dark-theme {
+  --navbar-bg: #202020;
+}
+
 .navbar {
   width: 100%;
   min-height: 76px;
