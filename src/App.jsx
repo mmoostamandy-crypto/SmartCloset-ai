@@ -3,8 +3,8 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  useLocation,
 } from "react-router-dom";
-
 
 import Navbar from "./components/Navbar";
 
@@ -17,11 +17,35 @@ import Weather from "./components/Weather";
 import AIOutfit from "./components/AIOutfit";
 import Favorites from "./components/Favorites";
 
-import Login from "./components/Login";
-
 import Footer from "./components/Footer";
 
 import "./App.css";
+
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
+
+function getPageTitle(pathname) {
+
+  if (pathname === "/closet") {
+    return "My Closet — SmartCloset";
+  }
+
+  if (pathname === "/weather") {
+    return "Weather — SmartCloset";
+  }
+
+  if (pathname === "/ai-outfit") {
+    return "AI Outfit — SmartCloset";
+  }
+
+  if (pathname === "/favorites") {
+    return "My Favorites — SmartCloset";
+  }
+
+  return "SmartCloset";
+}
 
 
 /* =====================================================
@@ -38,6 +62,120 @@ function HomePage() {
       <HomeExtra />
     </>
   );
+}
+
+
+/* =====================================================
+   APP LAYOUT
+===================================================== */
+
+function AppLayout({
+  theme,
+  toggleTheme,
+}) {
+
+  const location = useLocation();
+
+
+  /* ===================================================
+     PAGE TITLE
+  =================================================== */
+
+  useEffect(() => {
+
+    document.title = getPageTitle(
+      location.pathname
+    );
+
+  }, [location.pathname]);
+
+
+  return (
+
+    <div className={`app ${theme}-theme`}>
+
+      {/* =========================================
+          NAVBAR
+      ========================================= */}
+
+      <Navbar
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
+
+
+      {/* =========================================
+          MAIN
+      ========================================= */}
+
+      <main>
+
+        <Routes>
+
+          {/* =====================================
+              HOME
+          ===================================== */}
+
+          <Route
+            path="/"
+            element={<HomePage />}
+          />
+
+
+          {/* =====================================
+              MY CLOSET
+          ===================================== */}
+
+          <Route
+            path="/closet"
+            element={<MyCloset />}
+          />
+
+
+          {/* =====================================
+              WEATHER
+          ===================================== */}
+
+          <Route
+            path="/weather"
+            element={<Weather />}
+          />
+
+
+          {/* =====================================
+              AI OUTFIT
+          ===================================== */}
+
+          <Route
+            path="/ai-outfit"
+            element={<AIOutfit />}
+          />
+
+
+          {/* =====================================
+              FAVORITES
+          ===================================== */}
+
+          <Route
+            path="/favorites"
+            element={<Favorites />}
+          />
+
+        </Routes>
+
+      </main>
+
+
+      {/* =========================================
+          FOOTER
+      ========================================= */}
+
+      <Footer />
+
+    </div>
+
+  );
+
 }
 
 
@@ -68,7 +206,7 @@ function App() {
 
   useEffect(() => {
 
-    /* HTML */
+    /* HTML DATA THEME */
 
     document.documentElement.setAttribute(
       "data-theme",
@@ -137,106 +275,15 @@ function App() {
 
     <BrowserRouter>
 
-      <div
-        className={`app ${theme}-theme`}
-      >
-
-
-        {/* =========================================
-            NAVBAR
-        ========================================= */}
-
-        <Navbar
-          theme={theme}
-          toggleTheme={toggleTheme}
-        />
-
-
-        {/* =========================================
-            MAIN
-        ========================================= */}
-
-        <main>
-
-          <Routes>
-
-
-            {/* =====================================
-                HOME
-            ===================================== */}
-
-            <Route
-              path="/"
-              element={<HomePage />}
-            />
-
-
-            {/* =====================================
-                MY CLOSET
-            ===================================== */}
-
-            <Route
-              path="/closet"
-              element={<MyCloset />}
-            />
-
-
-            {/* =====================================
-                WEATHER
-            ===================================== */}
-
-            <Route
-              path="/weather"
-              element={<Weather />}
-            />
-
-
-            {/* =====================================
-                AI OUTFIT
-            ===================================== */}
-
-            <Route
-              path="/ai-outfit"
-              element={<AIOutfit />}
-            />
-
-
-            {/* =====================================
-                FAVORITES
-            ===================================== */}
-
-            <Route
-              path="/favorites"
-              element={<Favorites />}
-            />
-
-
-            {/* =====================================
-                LOGIN
-            ===================================== */}
-
-            <Route
-              path="/login"
-              element={<Login />}
-            />
-
-
-          </Routes>
-
-        </main>
-
-
-        {/* =========================================
-            FOOTER
-        ========================================= */}
-
-        <Footer />
-
-      </div>
+      <AppLayout
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
 
     </BrowserRouter>
 
   );
+
 }
 
 

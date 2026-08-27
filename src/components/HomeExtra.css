@@ -62,11 +62,10 @@
 
 .section-heading > span {
   color: var(--primary);
-
   font-size: 12px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .section-heading h2 {

@@ -245,30 +245,29 @@ function Home() {
           {/* FAVORITES */}
 
           <div
-            className="home-stat"
-          >
+  className="home-stat"
+>
 
-            <div className="home-stat-icon">
+  <div className="home-stat-icon">
 
-              <Heart size={20} />
+    <Heart size={20} />
 
-            </div>
+  </div>
 
 
-            <div>
+  <div>
 
-              <strong>
-                {favoriteCount}
-              </strong>
+    <strong>
+      {favoriteCount}
+    </strong>
 
-              <span>
-                Favorite Outfits
-              </span>
+    <span>
+      Favorite Items
+    </span>
 
-            </div>
+  </div>
 
-          </div>
-
+</div>
 
           {/* WEATHER */}
 

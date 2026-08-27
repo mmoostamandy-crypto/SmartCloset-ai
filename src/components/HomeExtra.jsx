@@ -201,12 +201,12 @@ function HomeExtra() {
           </span>
 
           <h2>
-            Your perfect outfit
-            <br />
-            <strong>
-              In three simple steps
-            </strong>
-          </h2>
+  Your perfect outfit
+  <br />
+  <strong>
+    in three simple steps
+  </strong>
+</h2>
 
         </div>
 
@@ -436,16 +436,12 @@ function HomeExtra() {
           </span>
 
           <h2>
-
-            Dress the way
-            <br />
-
-            <strong>
-              You feel.
-            </strong>
-
-          </h2>
-
+  Dress the way
+  <br />
+  <strong>
+    you feel.
+  </strong>
+</h2>
         </div>
 
 

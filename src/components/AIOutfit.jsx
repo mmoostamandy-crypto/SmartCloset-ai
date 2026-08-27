@@ -1078,49 +1078,34 @@ ${buildUserRequest()}
       >
 
         <div className="ai-outfit-header">
-
-          <span className="ai-outfit-label">
-            GROQ AI STYLIST
-          </span>
-
-          <h1>
-            Your AI{" "}
-            <strong>Outfit</strong>
-          </h1>
-
-          <p>
-            Your personal AI stylist uses
-            your wardrobe and current
-            conditions to build a complete
-            look.
-          </p>
-
-        </div>
-
-
-        <div className="ai-empty-state">
-
-          <div className="ai-empty-icon">
-
-            <Shirt size={42} />
-
-          </div>
-
-
-          <h2>
-            Your closet is empty
-          </h2>
-
-
-          <p>
-            Add some clothing items to
-            My Closet first. Then Groq AI
-            can use those pieces to create
-            personalized outfits.
-          </p>
-
-        </div>
-
+  <span className="ai-outfit-label">
+    AI personal stylist
+  </span>
+  <h1>
+    Your AI{" "}
+    <strong>Outfit</strong>
+  </h1>
+  <p>
+    Your personal AI stylist uses
+    your wardrobe and current
+    conditions to build a complete
+    look.
+  </p>
+</div>
+<div className="ai-empty-state">
+  <div className="ai-empty-icon">
+    <Shirt size={42} />
+  </div>
+  <h2>
+    Your closet is empty
+  </h2>
+  <p>
+    Add some clothing items to
+    My Closet first. Then your AI
+    stylist can use those pieces to
+    create personalized outfits.
+  </p>
+</div>
       </section>
 
     );
@@ -1143,25 +1128,21 @@ ${buildUserRequest()}
           HEADER
       ================================================= */}
 
-      <div className="ai-outfit-header">
-
-        <span className="ai-outfit-label">
-          GROQ AI STYLIST
-        </span>
-
-        <h1>
-          Your AI{" "}
-          <strong>Outfit</strong>
-        </h1>
-
-        <p>
-          Tell your AI stylist what you
-          want. It will analyze your closet,
-          weather, occasion, colors and style
-          preferences before making a recommendation.
-        </p>
-
-      </div>
+     <div> </div> className="ai-outfit-header"
+  <span className="ai-outfit-label">
+    AI personal stylist
+  </span>
+  <h1>
+    Your AI{" "}
+    <strong>Outfit</strong>
+  </h1>
+  <p>
+    Tell your AI stylist what you
+    want. It will analyze your closet,
+    weather, occasion, colors and style
+    preferences before making a recommendation.
+  </p>
+  <div></div>
 
 
       {/* =================================================
@@ -1244,17 +1225,14 @@ ${buildUserRequest()}
           </div>
 
 
-          <h2>
-            What should I wear?
-          </h2>
-
-
-          <p>
-            Choose your preferences and let
-            Groq create a personalized look
-            from your own wardrobe.
-          </p>
-
+         <h2>
+  What should I wear?
+</h2>
+<p>
+  Choose your preferences and let
+  your AI stylist create a personalized
+  look from your own wardrobe.
+</p>
 
           {/* OCCASION */}
 
@@ -1501,8 +1479,8 @@ ${buildUserRequest()}
               <WandSparkles size={20} />
 
               <span>
-                Groq AI
-              </span>
+  AI Stylist
+</span>
 
             </div>
 
@@ -1526,8 +1504,7 @@ ${buildUserRequest()}
                   className="spin-icon"
                 />
 
-                Groq is analyzing your wardrobe...
-
+              Your stylist is analyzing your wardrobe...
               </>
 
             ) : (

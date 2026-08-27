@@ -425,25 +425,20 @@ function Weather() {
 
       <section className="weather-header">
 
-        <div className="weather-title">
+       <div className="closet-header-content">
+  <span className="closet-label">
+    My digital wardrobe
+  </span>
+  <h1>
+    My <strong>Closet</strong>
+  </h1>
+  <p>
+    Organize your clothes, save your favorites,
+    and create beautiful outfits from your wardrobe.
+  </p>
+</div>
 
-          <span className="weather-label">
-            SMARTCLOSET
-          </span>
-
-          <h1>
-            Weather
-          </h1>
-
-          <p>
-            Check today's weather and plan
-            the perfect outfit for the day.
-          </p>
-
-        </div>
-
-        <div className="weather-actions">
-
+<div>
           <button
             type="button"
             className="weather-location-btn"
@@ -744,15 +739,13 @@ function Weather() {
 
             </div>
 
-            <div className="weather-outfit-content">
-
-              <span>
-                SMARTCLOSET OUTFIT GUIDE
-              </span>
-
-              <h2>
-                What should you wear?
-              </h2>
+       <div className="weather-outfit-content">
+  <span>
+    Outfit guide
+  </span>
+  <h2>
+    What should you wear?
+  </h2>
 
               <p>
                 It is currently{" "}

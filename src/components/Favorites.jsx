@@ -253,21 +253,17 @@ function Favorites() {
       <div className="favorites-header">
 
         <div className="favorites-header-content">
-
-          <span className="favorites-label">
-            YOUR FAVORITE ITEMS
-          </span>
-
-          <h1>
-            My <strong>Favorites</strong>
-          </h1>
-
-          <p>
-            Keep the clothing pieces you love
-            most in one beautiful collection.
-          </p>
-
-        </div>
+  <span className="favorites-label">
+    Your favorites
+  </span>
+  <h1>
+    My <strong>Favorites</strong>
+  </h1>
+  <p>
+    Keep the clothing pieces you love
+    most in one beautiful collection.
+  </p>
+</div>
 
         <div className="favorites-header-icon">
           <Heart
@@ -594,9 +590,8 @@ function Favorites() {
             </div>
 
             <h2>
-              No favorites found
-            </h2>
-
+  No favorites yet
+</h2>
             <p>
               We couldn't find any favorite items
               matching your search or filter.

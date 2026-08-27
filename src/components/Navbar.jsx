@@ -7,27 +7,23 @@ import {
   Heart,
   Moon,
   Sun,
-  LogIn,
-  UserPlus,
 } from "lucide-react";
 
 import { NavLink, useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 
-
-function Navbar({ theme, toggleTheme }) {
-
+function Navbar({
+  theme,
+  toggleTheme,
+}) {
   const navigate = useNavigate();
-
 
   const navLinkClass = ({ isActive }) =>
     isActive ? "active" : "";
 
-
   return (
     <header className="navbar">
-
 
       {/* =====================================
           LOGO
@@ -39,7 +35,6 @@ function Navbar({ theme, toggleTheme }) {
         role="button"
         tabIndex={0}
       >
-
         <div className="logo-icon">
           <Sparkles size={21} />
         </div>
@@ -47,7 +42,6 @@ function Navbar({ theme, toggleTheme }) {
         <span>
           SmartCloset
         </span>
-
       </div>
 
 
@@ -110,7 +104,6 @@ function Navbar({ theme, toggleTheme }) {
 
       <div className="navbar-actions">
 
-
         {/* DARK / LIGHT MODE */}
 
         <button
@@ -133,46 +126,10 @@ function Navbar({ theme, toggleTheme }) {
 
         </button>
 
-
-        {/* SIGN IN */}
-
-        <button
-          type="button"
-          className="sign-in-button"
-          onClick={() => navigate("/login")}
-        >
-
-          <LogIn size={17} />
-
-          <span>
-            Sign In
-          </span>
-
-        </button>
-
-
-        {/* LOG IN */}
-
-        <button
-          type="button"
-          className="sign-up-button"
-          onClick={() => navigate("/login")}
-        >
-
-          <UserPlus size={17} />
-
-          <span>
-            Log In
-          </span>
-
-        </button>
-
-
       </div>
 
     </header>
   );
 }
-
 
 export default Navbar;
