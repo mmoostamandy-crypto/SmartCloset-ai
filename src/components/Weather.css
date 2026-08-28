@@ -693,13 +693,11 @@
 }
 
 .section-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
-  gap: 25px;
-
-  margin-bottom: 20px;
+  /* display: flex; */
+ 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .section-heading span {

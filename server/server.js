@@ -353,12 +353,18 @@ Use exactly this JSON structure:
 // START SERVER
 // ===============================
 
-app.listen(PORT, () => {
-  console.log("");
-  console.log("========================================");
-  console.log(" SmartCloset Groq AI Server");
-  console.log("========================================");
-  console.log(` Server: http://localhost:${PORT}`);
-  console.log(" AI Endpoint: POST /api/ai-outfit");
-  console.log("========================================");
-});
+// Only run app.listen locally
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log("");
+    console.log("========================================");
+    console.log(" SmartCloset Groq AI Server");
+    console.log("========================================");
+    console.log(` Server: http://localhost:${PORT}`);
+    console.log(" AI Endpoint: POST /api/ai-outfit");
+    console.log("========================================");
+  });
+}
+
+// CRITICAL: Export the app module for Vercel
+export default app;

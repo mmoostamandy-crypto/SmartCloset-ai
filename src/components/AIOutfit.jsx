@@ -628,10 +628,8 @@ ${buildUserRequest()}
       // BACKEND REQUEST
       // =================================================
 
-      const response = await fetch(import.meta.env.VITE_API_URL || "http://localhost:5000/api/ai-outfit",
-
-        {
-          method: "POST",
+const response = await fetch(import.meta.env.VITE_API_URL || "http://localhost:5000/api/ai-outfit", {
+        method: "POST",
 
           headers: {
             "Content-Type":
@@ -1128,11 +1126,11 @@ ${buildUserRequest()}
           HEADER
       ================================================= */}
 
-      <div> className="ai-outfit-header" 
-      <span className="ai-outfit-label">
-        AI personal stylist
-      </span>
-      </div> 
+      <div className="ai-outfit-header">
+        <span className="ai-outfit-label">
+          AI personal stylist
+        </span>
+      </div>
       <h1>
         Your AI{" "}
         <strong>Outfit</strong>

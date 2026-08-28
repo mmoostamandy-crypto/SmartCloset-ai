@@ -732,47 +732,7 @@ function Weather() {
           </section>
 
 
-          {/* =============================================
-             SEASON + OUTFIT
-          ============================================= */}
-
-          <section className="weather-outfit-section">
-
-            <div className="weather-outfit-icon">
-
-              <Shirt size={25} />
-
-            </div>
-
-            <div className="weather-outfit-content">
-
-              <span>
-                SMARTCLOSET OUTFIT GUIDE
-              </span>
-
-              <h2>
-                What should you wear?
-              </h2>
-
-              <p>
-                It is currently{" "}
-                <strong>
-                  {weather.season}
-                </strong>
-                .
-                Based on the current
-                temperature and weather
-                conditions, we recommend:
-              </p>
-
-              <strong className="outfit-recommendation">
-                {weather.outfit}
-              </strong>
-
-            </div>
-
-          </section>
-
+        
 
           {/* =============================================
              FORECAST
